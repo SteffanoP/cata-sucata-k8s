@@ -23,9 +23,9 @@ variable "arm_pool_images" {
   description = "ready images for ARM pools"
   default = [
     # "Oracle-Linux-8.10-aarch64-2025.01.31-0-OKE-1.32.1-758",
-    "ocid1.image.oc1.eu-frankfurt-1.aaaaaaaagnwmbr2fsxjskziamql32oc465bbem5eal2r2e45lgvxal3swg6q",
+    "ocid1.image.oc1.iad.aaaaaaaa4nm7yrbhjnydbqe2e7loyw2b7bzgoiteqnzfeabagiyauivt4wwa",
     # "Oracle-Linux-8.10-aarch64-2025.01.31-0-OKE-1.32.1-758",
-    "ocid1.image.oc1.eu-frankfurt-1.aaaaaaaagnwmbr2fsxjskziamql32oc465bbem5eal2r2e45lgvxal3swg6q",
+    "ocid1.image.oc1.iad.aaaaaaaa4nm7yrbhjnydbqe2e7loyw2b7bzgoiteqnzfeabagiyauivt4wwa",
   ]
 }
 variable "enable_wireguard" {
