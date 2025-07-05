@@ -54,15 +54,15 @@ resource "kubernetes_manifest" "flux_instance" {
       ]
       "distribution" = {
         "artifact" = "oci://ghcr.io/controlplaneio-fluxcd/flux-operator-manifests"
-        "registry" = var.flux_registry
-        "version" = var.flux_version
+        "registry" = "ghcr.io/fluxcd"
+        "version" = "2.x"
       }
       "sync" = {
         "interval" = "1m"
         "kind" = "GitRepository"
-        "path" = var.git_path
+        "path" = "."
         "pullSecret" = "flux-system"
-        "ref" = var.git_ref
+        "ref" = "refs/heads/main"
         "url" = var.git_url
       }
       "wait" = "true"
