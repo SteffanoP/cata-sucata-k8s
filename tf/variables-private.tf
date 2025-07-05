@@ -31,7 +31,7 @@ variable "git_token" {
 }
 variable "git_url" {
   description = "Git repository URL"
-  default     = "https://github.com/multi-megaman/cata_sucata_mobile"
+  default     = "https://github.com/SteffanoP/cata-sucata-k8s"
   type        = string
   nullable    = false
 }
