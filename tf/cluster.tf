@@ -55,7 +55,7 @@ resource "oci_containerengine_node_pool" "k8s_node_pool" {
     size          = var.arm_pool_size
     freeform_tags = { "type" = "k8s" }
   }
-  node_shape = "VM.Standard.A1.Flex"
+  node_shape = "VM.Standard.A2.Flex"
 
   node_shape_config {
     memory_in_gbs = 12
@@ -77,7 +77,7 @@ resource "oci_containerengine_node_pool" "k8s_node_pool" {
   }
 
   ssh_public_key = var.ssh_public_key
-}
+} 
 
 resource "oci_core_volume" "arm_instance_volume" {
   count          = var.arm_pool_count
