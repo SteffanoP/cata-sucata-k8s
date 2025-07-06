@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: app
 resources:
   - github-api-token-secret.yml
+  - repo.yml
