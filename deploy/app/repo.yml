@@ -1,0 +1,31 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: mobile-repo
+  namespace: app
+spec:
+  interval: 1m
+  url: https://github.com/multi-megaman/cata_sucata_mobile
+  ref:
+    branch: main
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: mobile
+  namespace: app
+spec:
+  interval: 1h
+  path: ./deploy
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: mobile-repo
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-gpg
+      namespace: flux-system
+  postBuild:
+    substitute:
+      https_repo_url: "https://github.com/multi-megaman/cata_sucata_mobile"
