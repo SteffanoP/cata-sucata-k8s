@@ -60,7 +60,7 @@ resource "kubernetes_manifest" "flux_instance" {
       "sync" = {
         "interval" = "1m"
         "kind" = "GitRepository"
-        "path" = "./"
+        "path" = "./deploy"
         "pullSecret" = "flux-system"
         "ref" = "refs/heads/main"
         "url" = var.git_url
