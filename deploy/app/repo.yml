@@ -7,7 +7,7 @@ spec:
   interval: 1m
   url: https://github.com/multi-megaman/cata_sucata_mobile
   ref:
-    branch: main
+    branch: master
   secretRef:
     name: github
 ---
